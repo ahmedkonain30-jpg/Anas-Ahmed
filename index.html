@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Muhammad Anas | Professional CV</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Segoe UI,sans-serif;
+    background:#07111f;
+    color:#f5f7fb;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.wrap{
+    width:min(1100px,92%);
+    margin:auto;
+}
+
+/* NAVBAR */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:5;
+    background:#07111fee;
+    border-bottom:1px solid #ffffff18;
+    backdrop-filter:blur(12px);
+}
+
+.nav{
+    height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.brand{
+    font-weight:800;
+    font-size:21px;
+}
+
+.brand b,
+h1 span{
+    color:#62e6c0;
+}
+
+.links{
+    display:flex;
+    gap:22px;
+    color:#aebdce;
+    font-size:14px;
+}
+
+.links a:hover{
+    color:#62e6c0;
+}
+
+/* HERO */
+
+.hero{
+    padding:85px 0 65px;
+    background:
+    radial-gradient(circle at 15% 20%,#62e6c018,transparent 30%),
+    radial-gradient(circle at 85% 10%,#5d7cff18,transparent 28%);
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:1.3fr .7fr;
+    gap:45px;
+    align-items:center;
+}
+
+.tag{
+    display:inline-block;
+    border:1px solid #62e6c04d;
+    color:#62e6c0;
+    border-radius:99px;
+    padding:7px 12px;
+    font-size:12px;
+    font-weight:700;
+}
+
+h1{
+    font-size:clamp(45px,7vw,76px);
+    line-height:1;
+    margin:20px 0;
+}
+
+h1 span{
+    display:inline;
+}
+
+.hero p{
+    color:#aebdce;
+    font-size:18px;
+    max-width:650px;
+}
+
+/* BUTTONS */
+
+.btns{
+    display:flex;
+    gap:12px;
+    margin-top:28px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:12px 17px;
+    border-radius:11px;
+    border:1px solid #ffffff1a;
+    background:#ffffff08;
+    color:white;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.primary{
+    background:#62e6c0;
+    color:#06131a;
+    border-color:#62e6c0;
+}
+
+/* PROFILE */
+
+.profile{
+    height:350px;
+    border:1px solid #ffffff18;
+    border-radius:26px;
+    display:grid;
+    place-items:center;
+    background:
+    linear-gradient(145deg,#62e6c015,#ffffff05);
+}
+
+.avatar{
+    width:145px;
+    height:145px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    background:#091827;
+    border:1px solid #62e6c080;
+    color:#62e6c0;
+    font-size:42px;
+    font-weight:900;
+}
+
+/* SECTIONS */
+
+section{
+    padding:55px 0;
+}
+
+.title{
+    font-size:31px;
+    margin:0 0 7px;
+}
+
+.muted{
+    color:#aebdce;
+    margin:0 0 25px;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+}
+
+.card,
+.job{
+    background:#0d1b2e;
+    border:1px solid #ffffff12;
+    border-radius:18px;
+    padding:22px;
+}
+
+.card p,
+.job p{
+    color:#aebdce;
+}
+
+/* EXPERIENCE */
+
+.jobs{
+    display:grid;
+    gap:14px;
+}
+
+.jobtop{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.company{
+    color:#62e6c0;
+    font-weight:700;
+}
+
+/* SKILLS */
+
+.skills{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.skill{
+    padding:8px 12px;
+    border-radius:9px;
+    background:#62e6c012;
+    border:1px solid #62e6c025;
+    color:#dffbf4;
+}
+
+/* CONTACT */
+
+.contact{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+}
+
+.contact a{
+    color:#62e6c0;
+}
+
+/* FOOTER */
+
+footer{
+    border-top:1px solid #ffffff12;
+    padding:25px 0;
+    text-align:center;
+    color:#8191a4;
+}
+
+/* MOBILE */
+
+@media(max-width:760px){
+
+    .grid,
+    .cards,
+    .contact{
+        grid-template-columns:1fr;
+    }
+
+    .links{
+        display:none;
+    }
+
+    .hero{
+        padding-top:55px;
+    }
+
+    .profile{
+        height:270px;
+    }
+}
+
+/* PRINT */
+
+@media print{
+
+    nav,
+    .btns{
+        display:none;
+    }
+
+    .hero{
+        padding:25px 0;
+    }
+
+    .profile{
+        height:220px;
+    }
+
+    body{
+        background:white;
+        color:#111;
+    }
+
+    .card,
+    .job{
+        border:1px solid #ddd;
+        background:white;
+    }
+
+    .muted,
+    .hero p,
+    .card p,
+    .job p{
+        color:#444;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="wrap nav">
+
+<a class="brand" href="#">
+Muhammad <b>Anas</b>
+</a>
+
+<div class="links">
+
+<a href="#about">About</a>
+
+<a href="#experience">Experience</a>
+
+<a href="#skills">Skills</a>
+
+<a href="#education">Education</a>
+
+<a href="#contact">Contact</a>
+
+</div>
+
+</div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+<div class="wrap grid">
+
+<div>
+
+<span class="tag">
+PROFESSIONAL CV • PORTFOLIO
+</span>
+
+<h1>
+Muhammad <span>Anas</span>
+</h1>
+
+<p>
+Motivated and dependable professional with practical
+workplace experience, a strong work ethic and a
+commitment to excellence.
+</p>
+
+<div class="btns">
+
+<a class="btn primary" href="#contact">
+Contact Me
+</a>
+
+<button class="btn" onclick="window.print()">
+Print / Save CV
+</button>
+
+</div>
+
+</div>
+
+
+<div class="profile">
+
+<div class="avatar">
+MA
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+
+<main>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="wrap">
+
+<h2 class="title">
+About Me
+</h2>
+
+<p class="muted">
+Reliable, adaptable and team-oriented professional.
+</p>
+
+
+<div class="cards">
+
+<div class="card">
+
+<h3>
+Professional Profile
+</h3>
+
+<p>
+Organized, responsible and capable of learning new
+skills quickly. Communicates effectively and handles
+tasks efficiently.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+Career Focus
+</h3>
+
+<p>
+Dedicated to achieving organizational goals while
+maintaining a positive and professional attitude.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+<div class="wrap">
+
+<h2 class="title">
+Work Experience
+</h2>
+
+<p class="muted">
+Practical experience across multiple departments
+and workplaces.
+</p>
+
+
+<div class="jobs">
+
+
+<div class="job">
+
+<div class="jobtop">
+
+<h3>
+Worker — Post Packing Department
+</h3>
+
+<span class="company">
+National Foods
+</span>
+
+</div>
+
+<p>
+02 Years Experience
+</p>
+
+</div>
+
+
+
+<div class="job">
+
+<div class="jobtop">
+
+<h3>
+Park Train Operator
+</h3>
+
+<span class="company">
+Hilal Foods
+</span>
+
+</div>
+
+<p>
+02 Years Experience
+</p>
+
+</div>
+
+
+
+<div class="job">
+
+<div class="jobtop">
+
+<h3>
+Quality Full Skills
+</h3>
+
+<span class="company">
+Tecno Company
+</span>
+
+</div>
+
+<p>
+01 Year Experience
+</p>
+
+</div>
+
+
+
+<div class="job">
+
+<div class="jobtop">
+
+<h3>
+Tablet Manufacturing & Strip Filling
+</h3>
+
+<span class="company">
+Nabi Qasim
+</span>
+
+</div>
+
+<p>
+01 Year Experience
+</p>
+
+</div>
+
+
+
+<div class="job">
+
+<div class="jobtop">
+
+<h3>
+Surveillance Officer
+</h3>
+
+<span class="company">
+Level 3 Bos Zara
+</span>
+
+</div>
+
+<p>
+02 Years Experience
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<div class="wrap">
+
+<h2 class="title">
+Skills
+</h2>
+
+<p class="muted">
+Digital and professional workplace skills.
+</p>
+
+
+<div class="skills">
+
+<span class="skill">
+Word
+</span>
+
+<span class="skill">
+Excel
+</span>
+
+<span class="skill">
+PowerPoint
+</span>
+
+<span class="skill">
+Internet Surfing
+</span>
+
+<span class="skill">
+Teamwork
+</span>
+
+<span class="skill">
+Communication
+</span>
+
+<span class="skill">
+Responsibility
+</span>
+
+<span class="skill">
+Quick Learning
+</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+<div class="wrap">
+
+<h2 class="title">
+Education
+</h2>
+
+<p class="muted">
+Academic background from Karachi Board.
+</p>
+
+
+<div class="cards">
+
+<div class="card">
+
+<h3>
+Intermediate
+</h3>
+
+<p>
+With Science — Karachi Board
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+Matriculation
+</h3>
+
+<p>
+With Commerce — Karachi Board
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="wrap">
+
+<h2 class="title">
+Contact
+</h2>
+
+<p class="muted">
+Professional contact information.
+</p>
+
+
+<div class="contact">
+
+
+<div class="card">
+
+<h3>
+Phone
+</h3>
+
+<p>
+
+<a href="tel:03174713323">
+0317-4713323
+</a>
+
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+Email
+</h3>
+
+<p>
+
+<a href="mailto:muhammadanas4713@gmail.com">
+muhammadanas4713@gmail.com
+</a>
+
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+Location
+</h3>
+
+<p>
+Landhi, Karachi
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+Professional Profile
+</h3>
+
+<p>
+Open to suitable opportunities.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+© <span id="year"></span>
+Muhammad Anas • Professional CV Portfolio
+
+</footer>
+
+
+<script>
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+</script>
+
+
+</body>
+</html>
